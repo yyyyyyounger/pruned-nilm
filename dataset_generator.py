@@ -73,7 +73,8 @@ class DatasetGenerator():
         
         """
 
-        file_name = self.__directory + "CLEAN_House" + str(house) + ".csv"
+        # 2023.10.30 下載的.csv文件名已改為House_num.csv
+        file_name = self.__directory + "House_" + str(house) + ".csv"
         file_contents = pd.read_csv(file_name,
                                     names=["aggregate", self.__appliance],
                                     usecols=[2, channel + 2],
